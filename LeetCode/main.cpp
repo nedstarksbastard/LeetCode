@@ -1,18 +1,17 @@
-#include "linkedlist.cpp"
+#include "linkedlist.h"
 
-using namespace std;
 
 
 int main() {
 	string line;
 	while (getline(cin, line)) {
-		ListNode* l1 = stringToListNode(line);
+		ListNode* l1 = Solution().stringToListNode(line);
 		getline(cin, line);
-		ListNode* l2 = stringToListNode(line);
+		ListNode* l2 = Solution().stringToListNode(line);
 
 		ListNode* ret = Solution().addTwoNumbers(l1, l2);
 
-		string out = listNodeToString(ret);
+		string out = Solution().listNodeToString(ret);
 		cout << out << endl;
 	}
 	return 0;
